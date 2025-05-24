@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Fin AI Agent | Intercom",
+  title: "Echo Agent",
   description: "AI Assistant that helps users with their questions",
 };
 

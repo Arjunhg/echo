@@ -47,7 +47,7 @@ export default function Header() {
           >
             <Menu className="h-5 w-5" />
           </button>
-          <h1 className="text-lg font-semibold">Fin AI Agent</h1>
+          <h1 className="text-lg font-semibold">Echo Agent</h1>
         </div>
 
         <div className="flex items-center gap-4">
