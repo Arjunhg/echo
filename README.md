@@ -1,5 +1,5 @@
 # Echo AI Agent
-
+Live View: https://echo-ruby-ten.vercel.app/dashboard
 ## Features
 
 - **Dashboard:** Real-time metrics and activity feed
@@ -53,11 +53,3 @@
   /store - State management
   /utils - Utility functions
 ```
-
-## Screenshots
-
-(See `/to-be-made` folder for reference images)
-
-## License
-
-MIT
