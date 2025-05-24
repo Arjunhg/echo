@@ -1,6 +1,4 @@
-# Fin AI Agent - Intercom Replica
-
-This project is a functional replica of the Intercom's Fin AI agent interface, demonstrating how an AI-powered customer service assistant would work in a modern SaaS platform.
+# Echo AI Agent
 
 ## Features
 
