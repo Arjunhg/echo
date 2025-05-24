@@ -118,9 +118,9 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 20 }}
-              className="fixed inset-y-0 left-0 w-64 bg-background border-r border-border z-50 md:hidden"
+              className="fixed inset-y-0 left-0 w-64 bg-background border-r border-border z-50 md:hidden shadow-lg"
             >
-              <div className="flex items-center justify-between p-4 border-b border-border">
+              <div className="flex items-center justify-between p-4 border-b border-border bg-background">
                 <h2 className="text-lg font-semibold">Menu</h2>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -130,7 +130,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav className="p-4">
+              <nav className="p-4 bg-background">
                 <ul className="space-y-2">
                   {navigation.map((item) => {
                     const isActive = pathname === item.href;
@@ -154,7 +154,7 @@ export default function Header() {
                   })}
                 </ul>
 
-                <div className="mt-8 pt-4 border-t border-border">
+                <div className="mt-8 pt-4 border-t border-border bg-background">
                   <div className="flex items-center gap-3 px-3 py-2">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
                       <User className="h-4 w-4 text-primary" />
