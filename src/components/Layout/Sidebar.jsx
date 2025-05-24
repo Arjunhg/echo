@@ -59,7 +59,7 @@ export default function Sidebar() {
       >
         <div className="flex h-16 items-center justify-between border-b border-border px-4">
           <Link href="/dashboard" className="flex items-center space-x-2">
-            <span className="text-xl font-bold">Fin AI Agent</span>
+            <span className="text-xl font-bold">Echo Agent</span>
           </Link>
           <button
             className="md:hidden"

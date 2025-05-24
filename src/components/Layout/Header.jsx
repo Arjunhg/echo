@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/80 backdrop-blur-xl px-4 md:px-6">
       <div className="flex items-center gap-4">
-        <h1 className="text-lg font-semibold">Fin AI Agent</h1>
+        <h1 className="text-lg font-semibold">Echo Agent</h1>
       </div>
 
       <div className="flex items-center gap-4">
