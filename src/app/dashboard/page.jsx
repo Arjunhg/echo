@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, FileText, Settings, Plus, ArrowRight, CheckCircle, User, AlertCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import Card from '@/components/ui/Card';
+import Card from '../../components/UI/Card';
 
 const metrics = [
   {

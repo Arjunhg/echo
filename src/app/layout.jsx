@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Layout/Sidebar";
 import { Toaster } from 'react-hot-toast';
-import Spotlight from '@/components/ui/Spotlight';
+import Spotlight from '../components/ui/Spotlight';
 import Header from "@/components/Layout/Header";
 import { ThemeProvider } from 'next-themes';
 
