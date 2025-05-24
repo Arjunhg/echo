@@ -45,7 +45,7 @@ export default function ConversationsPage() {
     addMessage(selectedConversation.id, {
       sender: 'user',
       text: newMessage,
-      timestamp: 'Just now',
+      timestamp: new Date().toLocaleString(),
     });
     setNewMessage('');
 
@@ -104,10 +104,10 @@ export default function ConversationsPage() {
     const userName = prompt('Enter user name:');
     if (!userName) return;
 
-    const initialMessage = prompt('Enter initial message:');
-    if (!initialMessage) return;
+    // const initialMessage = prompt('Enter initial message:');
+    // if (!initialMessage) return;
 
-    createConversation(userName, initialMessage);
+    createConversation(userName);
     toast.success('New conversation created');
   };
 

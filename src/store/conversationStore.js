@@ -81,7 +81,7 @@ const useConversationStore = create(
           const newMessage = {
             ...message,
             id: conversation.messages.length + 1,
-            timestamp: message.timestamp || 'Just now',
+            timestamp: message.timestamp,
           };
 
           return {
@@ -106,23 +106,16 @@ const useConversationStore = create(
           };
         }),
       
-      createConversation: (userName, initialMessage) =>
+      createConversation: (userName) =>
         set((state) => {
           const newId = Math.max(0, ...state.conversations.map((conv) => conv.id)) + 1;
           const newConversation = {
             id: newId,
             userName,
-            lastMessage: initialMessage,
+            lastMessage: "",
             timestamp: 'Just now',
             status: 'unresolved',
-            messages: [
-              {
-                id: 1,
-                sender: 'user',
-                text: initialMessage,
-                timestamp: 'Just now',
-              },
-            ],
+            messages: [],
           };
 
           return {
