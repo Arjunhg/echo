@@ -3,6 +3,8 @@ import "./globals.css";
 import Sidebar from "@/components/Layout/Sidebar";
 import { Toaster } from 'react-hot-toast';
 import Spotlight from '@/components/ui/Spotlight';
+import Header from "@/components/Layout/Header";
+import { ThemeProvider } from 'next-themes';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,24 +18,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Spotlight />
-        <div className="flex h-screen">
-          <Sidebar />
-          <main className="flex-1 overflow-y-auto">
-            <div className="container mx-auto px-4 py-6">
-              {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Spotlight />
+          <div className="fixed inset-0 flex">
+            <Sidebar />
+            <div className="flex-1 flex flex-col">
+              <div className="flex-none bg-background/80 backdrop-blur-xl border-b border-border z-50">
+                <Header />
+              </div>
+              <main className="flex-1 relative">
+                <div className="absolute inset-0 overflow-y-auto">
+                  <div className="container mx-auto px-4 py-6">
+                    {children}
+                  </div>
+                </div>
+              </main>
             </div>
-          </main>
-        </div>
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            className: 'bg-background text-foreground border border-border',
-            duration: 3000,
-          }}
-        />
+          </div>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              className: 'bg-background text-foreground border border-border',
+              duration: 3000,
+            }}
+          />
+        </ThemeProvider>
       </body>
     </html>
   );
